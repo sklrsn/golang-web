@@ -1,4 +1,4 @@
-IMAGE:=sklrsn/golang-rest-app
+IMAGE:=sklrsn/go-tutorial
 
 all: build run
 
@@ -6,7 +6,7 @@ build:
 	  sudo docker build -t $(IMAGE) .
 
 run:
-	  sudo docker run $(IMAGE) /bin/sh -c "go run main/*"
+	  sudo docker run -p 8088:8080 $(IMAGE)
 
 clean:
 	  sudo docker rmi -f $(IMAGE)
