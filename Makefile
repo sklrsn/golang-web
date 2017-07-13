@@ -1,12 +1,4 @@
-IMAGE:=sklrsn/go-tutorial
-
-all: build run
-
-build:
-	  sudo docker build -t $(IMAGE) .
+all: run
 
 run:
-	  sudo docker run -p 8088:8080 $(IMAGE)
-
-clean:
-	  sudo docker rmi -f $(IMAGE)
+	sudo docker-compose up
