@@ -25,6 +25,6 @@ node3:
     ports:
         - "8080"
 redis:
-    image: redis
+    build: ./redis
     ports:
         - "6379"
